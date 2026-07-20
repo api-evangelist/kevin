@@ -1,0 +1,39 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.npmjs.com/package/@kevin.eu/kevin-platform-client (official SDK) + https://developer.kevin.eu/
+docs: https://developer.kevin.eu/platform/general/authentication
+summary:
+  types: [apiKey, oauth2]
+  api_key_in: [header]
+  oauth2_flows: [authorizationCode]
+schemes:
+- name: PlatformClientCredentials
+  type: apiKey
+  in: header
+  description: >-
+    Client-level credentials (Client-Id + Client-Secret) identify the merchant /
+    project. Used for General and Payment Initiation Service calls. In the SDK
+    this is `new kevin.Client(clientId, clientSecret)`.
+  parameters:
+  - Client-Id
+  - Client-Secret
+  applies_to: [General-Service, Payment-Initiation-Service]
+- name: UserBearerToken
+  type: oauth2
+  scheme: bearer
+  description: >-
+    Account Information Service uses a user-authorization flow: `startAuth` (with
+    requested scopes + a Redirect-URL) returns an auth key; `receiveToken`
+    exchanges the auth key for a bearer + refresh token pair; `refreshToken`
+    exchanges a refresh token for a new bearer token; `receiveTokenContent`
+    inspects a bearer token. Bearer tokens authorize per-account AIS calls.
+  flow: authorizationCode
+  operations: [startAuth, receiveToken, refreshToken, receiveTokenContent]
+  applies_to: [Account-Information-Service]
+  scopes_ref: scopes/kevin-scopes.yml
+notes: >-
+  A2A open-banking (PSD2) provider. Merchant/project auth is header client
+  credentials; end-user account access is a scoped, redirect-based token flow.
+  No mutualTLS / mTLS scheme was documented in the public SDK. Derived from the
+  official Node SDK and archived developer reference; live docs host
+  (developer.kevin.eu) no longer resolves as of 2026-07.
