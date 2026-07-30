@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: searched
+source: web.archive.org (api-reference.kevin.eu) + DNS/TLS probes
+versioning:
+  scheme: uri-path
+  current: v0.3
+  known_versions: [v0.2, v0.3]
+  docs: https://api-reference.kevin.eu/public/platform/v0.3
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+sla:
+  url: null
+status_page: null
+company_status:
+  state: wound-down
+  evidence: >-
+    Primary domain kevin.eu (and api.kevin.eu / developer.kevin.eu /
+    status.kevin.eu / api-reference.kevin.eu) no longer resolve to web hosts as
+    of 2026-07-19; the domain retains only mail-forwarding DNS (ImprovMX SPF).
+    The original getkevin.eu domain resolves via Cloudflare but returns 403.
+notes: >-
+  kevin. operated a versioned (v0.2 -> v0.3) URI-path platform API. No public
+  status page or formal deprecation-policy page was recoverable. Recorded here
+  for operational-transparency context; the API appears no longer in service.

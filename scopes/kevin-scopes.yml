@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.npmjs.com/package/@kevin.eu/kevin-platform-client (official SDK, startAuth example)
+docs: https://developer.kevin.eu/platform/account-information
+schemes:
+- name: UserBearerToken
+  source: "@kevin.eu/kevin-platform-client"
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.kevin.eu/platform/auth
+    tokenUrl: https://api.kevin.eu/platform/auth/token
+scopes:
+- scope: payments
+  description: Initiate and manage payments on behalf of the authorizing user.
+  flows: [authorizationCode]
+  sources: ["@kevin.eu/kevin-platform-client"]
+- scope: accounts_basic
+  description: Read basic account information (Account Information Service).
+  flows: [authorizationCode]
+  sources: ["@kevin.eu/kevin-platform-client"]
+notes: >-
+  Scopes `payments` and `accounts_basic` are the values documented in the
+  official SDK `startAuth` example. kevin.'s AIS surface (getAccounts,
+  getAccount, getAccountTransactions, getAccountBalance) implies additional
+  account-detail/transaction/balance scopes, but only the two verbatim SDK
+  scopes are recorded here to avoid fabrication. Authorization/token URLs are the
+  documented api.kevin.eu platform host.

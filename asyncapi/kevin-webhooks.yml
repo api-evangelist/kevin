@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.npmjs.com/package/@kevin.eu/kevin-platform-client + https://www.npmjs.com/package/@kevin.eu/kevin-cli
+spec_type: Webhooks
+docs: https://developer.kevin.eu/platform/payments/payment-verification
+description: >-
+  kevin. delivers signed webhooks to notify integrators of payment lifecycle
+  status changes. The payload is a JSON object; authenticity is verified with an
+  HMAC signature over the body, headers and request URL using a per-endpoint
+  secret, with a timestamp/replay window.
+verification:
+  mechanism: hmac-signature
+  helper: kevin.SecurityManager(endpointSecret).verifySignature(body, headers, url, timestampTimeout)
+  inputs: [body, headers, webhookUrl, timestampTimeout]
+  replay_protection: timestamp timeout window
+  docs: https://developer.kevin.eu/platform/payments/payment-verification#computing-signature-hash
+payload:
+  fields:
+  - {name: id, description: Identifier of the payment (or resource) the event refers to}
+  - {name: type, description: Event/resource type, e.g. "payment"}
+  - {name: bankStatus, description: Bank-reported status code (ISO 20022 style), e.g. ACSP}
+  - {name: statusGroup, description: Grouped/normalized status, e.g. STRD}
+  example: '{"id":"asd123dfgh","bankStatus":"ACSP","statusGroup":"STRD","type":"payment"}'
+events:
+- name: payment.status-changed
+  description: Emitted when a payment's bank status / status group changes (e.g. initiated -> ACSP -> completed/STRD).
+notes: >-
+  Captured as a Webhooks surface (no published AsyncAPI document was found).
+  Status values (ACSP, STRD) follow ISO 20022 payment-status conventions. The
+  @kevin.eu/kevin-cli tool sends signed test webhooks for local verification.

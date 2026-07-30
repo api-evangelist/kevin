@@ -1,0 +1,54 @@
+generated: '2026-07-19'
+method: searched
+source: https://registry.npmjs.org/ (npm @kevin.eu scope)
+packages:
+- language: javascript
+  registry: npm
+  name: "@kevin.eu/kevin-platform-client"
+  url: https://www.npmjs.com/package/@kevin.eu/kevin-platform-client
+  install: npm install @kevin.eu/kevin-platform-client
+  version: 2.2.5
+  license: MIT
+  official: true
+  kind: sdk
+  description: Node.js client library implementing the kevin. platform API (Auth, Payment Initiation, Account Information, General services).
+  repository: https://gitlab.com/kevineu/checkout/platform-client
+- language: javascript
+  registry: npm
+  name: "@kevin.eu/kevin-cli"
+  url: https://www.npmjs.com/package/@kevin.eu/kevin-cli
+  install: npm install -g @kevin.eu/kevin-cli
+  version: 1.0.8
+  license: MIT
+  official: true
+  kind: cli
+  bin: kevin
+  description: Command-line interface for testing kevin. signed webhooks.
+  repository: https://bitbucket.org/kevinlt/kevin-cli
+- language: javascript
+  registry: npm
+  name: "@kevin.eu/kevin-ui"
+  url: https://www.npmjs.com/package/@kevin.eu/kevin-ui
+  install: npm install @kevin.eu/kevin-ui
+  version: 0.56.77
+  license: ISC
+  official: true
+  kind: ui-components
+  description: kevin. design-system React UI component library.
+  repository: https://bitbucket.org/kevinlt/kevin-ui
+- language: javascript
+  registry: npm
+  name: "@kevin.eu/eslint-config-kevin-react"
+  url: https://www.npmjs.com/package/@kevin.eu/eslint-config-kevin-react
+  install: npm install --save-dev @kevin.eu/eslint-config-kevin-react
+  version: 1.2.0
+  license: ISC
+  official: true
+  kind: tooling
+  description: Internal ESLint config for kevin. React projects.
+  repository: https://bitbucket.org/kevinlt/eslint-config-kevin-react
+notes: >-
+  All packages are first-party (published under the @kevin.eu npm scope by
+  maintainers with @kevin.eu / @getkevin.eu emails). The primary API client SDK
+  is @kevin.eu/kevin-platform-client. No PyPI, Maven, NuGet, Go, RubyGems,
+  Packagist or crates.io first-party libraries were found.

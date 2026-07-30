@@ -1,0 +1,29 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.npmjs.com/package/@kevin.eu/kevin-ui
+families:
+- name: kevin. UI design system
+  package: "@kevin.eu/kevin-ui"
+  version: 0.56.77
+  type: react-component-library
+  loader: npm install @kevin.eu/kevin-ui
+  description: >-
+    First-party React design-system component library published by kevin.
+    (devops@getkevin.eu). Provides the reusable UI building blocks used across
+    kevin. dashboards and hosted payment surfaces.
+  built_on:
+  - react
+  - react-aria
+  - "@react-aria/utils"
+  - "@floating-ui/react-dom-interactions"
+  - framer-motion
+  - downshift
+  - react-datepicker
+  - react-code-input
+  - react-dropzone
+  keywords:
+  - design-system
+notes: >-
+  Distinct from the server-side SDK (@kevin.eu/kevin-platform-client). Captured
+  as a first-party embeddable/client-side component library. Repository:
+  https://bitbucket.org/kevinlt/kevin-ui

@@ -1,0 +1,28 @@
+generated: '2026-07-19'
+method: derived
+source: official SDK service structure (Payment Initiation + Account Information services) + payload conventions
+standards:
+- id: psd2
+  conforms: true
+  evidence: >-
+    Provides PSD2 open-banking services - Payment Initiation Service (PIS) and
+    Account Information Service (AIS) - over bank (ASPSP) connections across 28
+    European countries.
+- id: oauth2
+  conforms: true
+  evidence: Scoped bearer + refresh token authorization-code-style flow (startAuth/receiveToken/refreshToken) with scopes payments, accounts_basic.
+- id: iso20022-payment-status
+  conforms: true
+  evidence: Webhook payment statuses use ISO 20022 status codes (e.g. ACSP, STRD).
+- id: sepa
+  conforms: true
+  evidence: Bank payments carry IBAN creditorAccount and endToEndId (SEPA-style credit transfer).
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors use a custom httpCode/errorName/errorCode JSON envelope, not application/problem+json.
+notes: >-
+  Cross-cutting standards asserted from the documented service structure and
+  payload conventions. No published SOC 2 / ISO 27001 / PCI compliance page was
+  fetched, so no Compliance pointer is emitted (kevin. operated as a
+  Bank-of-Lithuania-licensed institution, but the certification page was not
+  recoverable).

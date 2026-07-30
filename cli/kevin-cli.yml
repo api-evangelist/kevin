@@ -1,0 +1,35 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.npmjs.com/package/@kevin.eu/kevin-cli
+name: kevin CLI
+package: "@kevin.eu/kevin-cli"
+version: 1.0.8
+license: MIT
+binary: kevin
+install:
+- method: npm
+  command: npm install -g @kevin.eu/kevin-cli
+- method: npx
+  command: npx @kevin.eu/kevin-cli
+purpose: >-
+  Developer utility for testing kevin. webhook flows locally without exposing a
+  listener. Sends signed webhooks (with a specified or randomly generated
+  payload) to an endpoint so integrators can validate their webhook handling and
+  signature verification.
+commands:
+- command: kevin send <url> --secret=<endpoint-secret>
+  description: Send a signed webhook to the given endpoint using the endpoint secret. Payload is randomly generated when not supplied.
+  example: npx kevin send https://example.com --secret=mysecret
+- command: kevin send <url> --secret=<endpoint-secret> '<json-payload>'
+  description: Send a signed webhook with a custom JSON payload.
+  example: >-
+    npx kevin send https://webhook.site/xxxx --secret=xxxx
+    '{"id":"asd123dfgh","bankStatus":"ACSP","statusGroup":"STRD","type":"payment"}'
+dependencies:
+- axios
+- express
+- yargs
+notes: >-
+  The webhook payload fields (id, bankStatus, statusGroup, type) and status
+  codes (e.g. ACSP, STRD) match kevin.'s payment webhook contract documented at
+  developer.kevin.eu. See asyncapi/kevin-webhooks.yml.

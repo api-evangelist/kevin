@@ -1,0 +1,35 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.npmjs.com/package/@kevin.eu/kevin-platform-client (official SDK) + archived developer.kevin.eu reference
+authentication:
+  merchant: Client-Id + Client-Secret headers (client credentials)
+  user: scoped bearer + refresh token (authorization-code style) for Account Information
+  ref: authentication/kevin-authentication.yml
+versioning:
+  scheme: uri-path
+  current: v0.3
+  known_versions: [v0.2, v0.3]
+  example: https://api-reference.kevin.eu/public/platform/v0.3
+redirect_flow:
+  header: Redirect-URL
+  description: Payment initiation and user authorization pass a Redirect-URL header; kevin. hosts the bank-selection/authorization UI at redirect.kevin.eu and redirects back.
+payment_reference:
+  field: endToEndId
+  description: Client-supplied end-to-end payment identifier on bankPaymentMethod (SEPA-style reference).
+error_envelope:
+  fields: [httpCode, errorName, errorCode]
+  format: custom-json
+  ref: errors/kevin-error-codes.yml
+webhooks:
+  signed: true
+  mechanism: hmac-signature over body+headers+url with per-endpoint secret and timestamp replay window
+  ref: asyncapi/kevin-webhooks.yml
+idempotency:
+  documented: false
+  note: No dedicated idempotency-key header was documented in the public SDK; endToEndId is a payment reference, not an idempotency key.
+pagination:
+  documented: unknown
+notes: >-
+  Cross-cutting request/response semantics captured from the official Node SDK
+  and archived developer reference. Only documented behaviours are asserted;
+  pagination style and any idempotency contract were not publicly evidenced.

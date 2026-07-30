@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.npmjs.com/package/@kevin.eu/kevin-platform-client (official SDK error classes)
+format: custom-json
+envelope:
+  fields: [httpCode, errorName, errorCode]
+  description: >-
+    On failure the platform returns a JSON error; the SDK throws an error
+    inheriting the base `KevinError` class carrying httpCode, errorName and
+    errorCode.
+errors:
+- class: KevinError
+  base: true
+  description: Base error class all kevin. platform errors inherit from.
+- class: KevinBadRequestError
+  status: 400
+  description: Request was malformed or failed validation.
+- class: KevinUnauthorizedError
+  status: 401
+  description: Authentication failed or credentials/token were missing, invalid or expired.
+notes: >-
+  Only the base class and the two named subclasses documented in the official
+  SDK README are captured; the platform exposes additional httpCode/errorName/
+  errorCode combinations that were not enumerated publicly. Errors are a custom
+  JSON envelope, not RFC 9457 application/problem+json. Non-payments-decline
+  sibling of a decline-code registry (kevin. is A2A/open-banking, not a card
+  acquirer, so no buyer-facing decline-code catalog).

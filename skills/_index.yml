@@ -1,0 +1,16 @@
+generated: '2026-07-19'
+method: generated
+source: https://www.npmjs.com/package/@kevin.eu/kevin-platform-client (verified operationIds)
+skills:
+- file: kevin-initiate-bank-payment.md
+  name: Initiate an account-to-account bank payment
+  api: "@kevin.eu/kevin-platform-client"
+  operations: [getBanks, initiatePayment, getPaymentStatus]
+- file: kevin-refund-payment.md
+  name: Refund a payment and reconcile
+  api: "@kevin.eu/kevin-platform-client"
+  operations: [initiatePaymentRefund, getPaymentRefunds, getPaymentStatus]
+- file: kevin-read-account-information.md
+  name: Authorize and read bank account information
+  api: "@kevin.eu/kevin-platform-client"
+  operations: [startAuth, receiveToken, getAccounts, getAccountTransactions, getAccountBalance]

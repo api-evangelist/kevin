@@ -1,0 +1,35 @@
+generated: '2026-07-19'
+method: derived
+source: https://www.npmjs.com/package/@kevin.eu/kevin-platform-client (official SDK operation + payload surface)
+entities:
+- name: Country
+  description: ISO country code supported by kevin. (28 European countries at v0.3).
+- name: Bank
+  description: A connectable bank / ASPSP within a country.
+- name: PaymentMethod
+  description: A supported payment method (bank, card/hybrid).
+- name: Payment
+  description: An initiated payment. Payload fields include amount, currencyCode, description, bankPaymentMethod{creditorName, endToEndId, creditorAccount{iban}}.
+- name: Refund
+  description: A refund against a payment.
+- name: Account
+  description: An end-user bank account exposed via the Account Information Service.
+- name: Transaction
+  description: A transaction on an account.
+- name: Balance
+  description: An account balance.
+- name: Token
+  description: A bearer/refresh token issued via the auth flow.
+- name: ProjectSettings
+  description: Merchant/project configuration.
+relationships:
+- {from: Bank, to: Country, type: belongs_to, via: countryCode}
+- {from: Payment, to: Refund, type: has_many, via: paymentId, evidence: getPaymentRefunds}
+- {from: Payment, to: PaymentMethod, type: has_one, via: bankPaymentMethod}
+- {from: Account, to: Transaction, type: has_many, via: accountId, evidence: getAccountTransactions}
+- {from: Account, to: Balance, type: has_one, via: accountId, evidence: getAccountBalance}
+notes: >-
+  Entity graph derived from the official SDK's documented operations and payment
+  payload; relationships shown are those evidenced by operation grouping
+  (getPaymentRefunds, getAccountTransactions, getAccountBalance) and the payment
+  request body. No raw OpenAPI was recoverable to enumerate every field.
