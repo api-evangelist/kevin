@@ -1,7 +1,27 @@
 aid: kevin
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/kevin.png
 name: Kevin.
-description: 'Kevin. is a company surfaced as a portfolio company of accel and added to the API Evangelist
-  network as a stub for enrichment. Sector: payments. This profile is a lead awaiting the enrichment pipeline.'
+description: >-
+  kevin. was a Lithuanian account-to-account (A2A) payments infrastructure company providing PSD2
+  open-banking Payment Initiation and Account Information services to merchants across 28 European
+  countries. Its platform API let businesses initiate bank (SEPA) and card (hybrid) payments, issue
+  refunds, read account data, and receive signed payment webhooks through a single integration to
+  hundreds of banks, supported by an official Node.js SDK, a CLI, and a React UI component library.
+  Backed by Accel. The company has wound down its public web presence - kevin.eu no longer resolves
+  as of 2026-07 - and this profile is enriched from kevin.'s published npm packages and archived
+  developer reference.
 url: https://raw.githubusercontent.com/api-evangelist/kevin/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,13 +29,52 @@ x-backed-by:
 - accel
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: wound-down
+x-status-evidence: 'kevin.eu / api.kevin.eu / developer.kevin.eu no longer resolve (2026-07-19); domain retains mail-forwarding DNS only'
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Payments
-apis: []
+- Open Banking
+- Account to Account
+- PSD2
+- Fintech
+- Bank Payments
+- Payment Initiation
+- Account Information
+- Europe
+apis:
+- name: kevin. platform API
+  description: >-
+    PSD2 open-banking platform API: Authentication, General, Payment Initiation (PIS) and Account
+    Information (AIS) services for account-to-account bank payments, card (hybrid) payments, refunds
+    and account data across 28 European countries.
+  humanURL: https://api-reference.kevin.eu/public/platform/v0.3
+  baseURL: https://api.kevin.eu/platform
+  tags:
+  - Payments
+  - Open Banking
+  - PSD2
+  - Account to Account
+  properties:
+  - type: APIReference
+    url: https://api-reference.kevin.eu/public/platform/v0.3
+  - type: Documentation
+    url: https://developer.kevin.eu/
+  - type: Authentication
+    url: authentication/kevin-authentication.yml
+  - type: OAuthScopes
+    url: scopes/kevin-scopes.yml
+  - type: ErrorCatalog
+    url: errors/kevin-error-codes.yml
+  - type: Webhooks
+    url: asyncapi/kevin-webhooks.yml
+  - type: DataModel
+    url: data-model/kevin-data-model.yml
+  - type: MCPServer
+    url: mcp/kevin-mcp.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -24,3 +83,44 @@ maintainers:
 common:
 - type: Website
   url: https://www.kevin.eu/
+- type: Documentation
+  url: https://developer.kevin.eu/
+- type: APIReference
+  url: https://api-reference.kevin.eu/public/platform/v0.3
+- type: Packages
+  url: packages/kevin-packages.yml
+- type: SDKs
+  url: packages/kevin-packages.yml
+- type: CLI
+  url: cli/kevin-cli.yml
+- type: Components
+  url: components/kevin-components.yml
+- type: Authentication
+  url: authentication/kevin-authentication.yml
+- type: OAuthScopes
+  url: scopes/kevin-scopes.yml
+- type: ErrorCatalog
+  url: errors/kevin-error-codes.yml
+- type: Webhooks
+  url: asyncapi/kevin-webhooks.yml
+- type: Conventions
+  url: conventions/kevin-conventions.yml
+- type: DataModel
+  url: data-model/kevin-data-model.yml
+- type: Conformance
+  url: conformance/kevin-conformance.yml
+- type: MCPServer
+  url: mcp/kevin-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Lifecycle
+  url: lifecycle/kevin-lifecycle.yml
+- type: LLMsTxt
+  url: llms/kevin-llms.txt
+- type: DomainSecurity
+  url: security/kevin-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
