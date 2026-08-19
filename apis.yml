@@ -31,7 +31,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 x-status: wound-down
 x-status-evidence: 'kevin.eu / api.kevin.eu / developer.kevin.eu no longer resolve (2026-07-19); domain retains mail-forwarding DNS only'
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-19'
 tags:
