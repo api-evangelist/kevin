@@ -5,28 +5,70 @@ source: https://www.npmjs.com/package/@kevin.eu/kevin-platform-client (official 
 server:
   name: kevin
   transport: http
-description: >-
-  Candidate MCP tool surface derived from the operationIds exposed by the
-  official kevin. platform SDK (Auth, General, Payment Initiation, Account
-  Information services). No official hosted MCP server was found; this is a
-  starting point, not a published server.
+description: Candidate MCP tool surface derived from the operationIds exposed by the official kevin. platform
+  SDK (Auth, General, Payment Initiation, Account Information services). No official hosted MCP server
+  was found; this is a starting point, not a published server.
 tools:
-- {name: get_countries, description: List supported countries, source_operation: getCountries}
-- {name: get_banks, description: List supported banks, source_operation: getBanks}
-- {name: get_bank, description: Get a single bank's data, source_operation: getBank}
-- {name: get_savings_banks, description: List supported savings banks, source_operation: getSavingsBanks}
-- {name: get_payment_methods, description: List supported payment methods, source_operation: getPaymentMethods}
-- {name: get_project_settings, description: Get project settings, source_operation: getProjectSettings}
-- {name: initiate_payment, description: Initiate a bank or card (hybrid) payment, source_operation: initiatePayment}
-- {name: get_payment, description: Retrieve a payment, source_operation: getPayment}
-- {name: get_payment_status, description: Get a payment's status, source_operation: getPaymentStatus}
-- {name: initiate_payment_refund, description: Initiate a payment refund, source_operation: initiatePaymentRefund}
-- {name: get_payment_refunds, description: List refunds for a payment, source_operation: getPaymentRefunds}
-- {name: start_auth, description: Start user authentication for account access, source_operation: startAuth}
-- {name: receive_token, description: Exchange an auth key for a bearer + refresh token, source_operation: receiveToken}
-- {name: refresh_token, description: Exchange a refresh token for a new bearer token, source_operation: refreshToken}
-- {name: receive_token_content, description: Inspect a bearer token's content, source_operation: receiveTokenContent}
-- {name: get_accounts, description: List authorized accounts, source_operation: getAccounts}
-- {name: get_account, description: Get account details, source_operation: getAccount}
-- {name: get_account_transactions, description: Get account transactions, source_operation: getAccountTransactions}
-- {name: get_account_balance, description: Get account balance, source_operation: getAccountBalance}
+- name: get_countries
+  description: List supported countries
+  source_operation: getCountries
+- name: get_banks
+  description: List supported banks
+  source_operation: getBanks
+- name: get_bank
+  description: Get a single bank's data
+  source_operation: getBank
+- name: get_savings_banks
+  description: List supported savings banks
+  source_operation: getSavingsBanks
+- name: get_payment_methods
+  description: List supported payment methods
+  source_operation: getPaymentMethods
+- name: get_project_settings
+  description: Get project settings
+  source_operation: getProjectSettings
+- name: initiate_payment
+  description: Initiate a bank or card (hybrid) payment
+  source_operation: initiatePayment
+- name: get_payment
+  description: Retrieve a payment
+  source_operation: getPayment
+- name: get_payment_status
+  description: Get a payment's status
+  source_operation: getPaymentStatus
+- name: initiate_payment_refund
+  description: Initiate a payment refund
+  source_operation: initiatePaymentRefund
+- name: get_payment_refunds
+  description: List refunds for a payment
+  source_operation: getPaymentRefunds
+- name: start_auth
+  description: Start user authentication for account access
+  source_operation: startAuth
+- name: receive_token
+  description: Exchange an auth key for a bearer + refresh token
+  source_operation: receiveToken
+- name: refresh_token
+  description: Exchange a refresh token for a new bearer token
+  source_operation: refreshToken
+- name: receive_token_content
+  description: Inspect a bearer token's content
+  source_operation: receiveTokenContent
+- name: get_accounts
+  description: List authorized accounts
+  source_operation: getAccounts
+- name: get_account
+  description: Get account details
+  source_operation: getAccount
+- name: get_account_transactions
+  description: Get account transactions
+  source_operation: getAccountTransactions
+- name: get_account_balance
+  description: Get account balance
+  source_operation: getAccountBalance
+deployment:
+  mode: none
+  verified: derived
+  tools: 19
+  checked: '2026-08-12'
+  source: catalog MCP census
