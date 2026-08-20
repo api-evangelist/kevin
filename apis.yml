@@ -38,6 +38,17 @@ tags:
 - Company
 - Payments
 - Open Banking
+- Account-to-Account
+- PSD2
+- Fintech
+- Bank Payments
+- Payment Initiation
+- Account Information
+- Europe
+tags_raw:
+- Company
+- Payments
+- Open Banking
 - Account to Account
 - PSD2
 - Fintech
@@ -54,6 +65,11 @@ apis:
   humanURL: https://api-reference.kevin.eu/public/platform/v0.3
   baseURL: https://api.kevin.eu/platform
   tags:
+  - Payments
+  - Open Banking
+  - PSD2
+  - Account-to-Account
+  tags_raw:
   - Payments
   - Open Banking
   - PSD2
