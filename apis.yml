@@ -49,7 +49,7 @@ tags:
 - Company
 - Payments
 - Open Banking
-- Account-to-Account
+- Account to Account
 - PSD2
 - Fintech
 - Bank Payments
@@ -79,7 +79,7 @@ apis:
   - Payments
   - Open Banking
   - PSD2
-  - Account-to-Account
+  - Account to Account
   tags_raw:
   - Payments
   - Open Banking
