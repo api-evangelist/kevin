@@ -64,6 +64,71 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Kevin. is a company surfaced as a portfolio company of accel and added to the API Evangelist network as a stub for enrichment. Sector: payments. This profile is a lead awaiting the enrichment pipeline.
+> **No longer operating.** This company or product has shut down, been discontinued, or been deprecated. This profile is kept as a historical record and is not maintained or rated.
 
-Backed by: accel — https://www.kevin.eu/
+**Status:** wound-down
+
+kevin. was a Lithuanian account-to-account (A2A) payments infrastructure company providing PSD2 open-banking Payment Initiation and Account Information services to merchants across 28 European countries. Its platform API let businesses initiate bank (SEPA) and card (hybrid) payments, issue refunds, read account data, and receive signed payment webhooks through a single integration to hundreds of banks, supported by an official Node.js SDK, a CLI, and a React UI component library. Backed by Accel. The company has wound down its public web presence - kevin.eu no longer resolves as of 2026-07 - and this profile is enriched from kevin.'s published npm packages and archived developer reference.
+
+**Areas:** Company · Payments · Open Banking · Account-to-Account · PSD2 · Fintech · Bank Payments · Payment Initiation · Account Information · Europe
+
+## Kevin. on APIs.io (historical record)
+
+Everything profiled for Kevin. is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/kevin/](https://apis.io/providers/kevin/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [kevin. platform API](https://apis.io/apis/kevin/kevin-platform-api/) — PSD2 open-banking platform API: Authentication, General, Payment Initiation (PIS) and Account Information (AIS) services for account-to-account bank…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Kevin Webhooks](https://apis.io/asyncapis/kevin/kevin-webhooks/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [kevin](https://apis.io/servers/kevin/kevin/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Kevin Authentication](https://apis.io/security/kevin/kevin-authentication/)
+- [Kevin Domain Security](https://apis.io/security/kevin/kevin-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Kevin Scopes](https://apis.io/scopes/kevin/kevin-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.kevin.eu/)
+- [Documentation](https://developer.kevin.eu/)
+- [API reference](https://api-reference.kevin.eu/public/platform/v0.3)
+
+## API Evangelist rating
+
+**Not rated** — this company is recorded as no longer operating, so no score is published. If it is in fact operating, say so on this repository and it will be re-profiled.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Kevin.: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/kevin/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
